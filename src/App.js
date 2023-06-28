@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
 
+  /* state */
   let [title, setTitle] = useState([]);
   let [date, setDate] = useState([]);
   let [detail, setDetail] = useState([]);
@@ -12,12 +13,14 @@ function App() {
   let [boardTitle, setBoardTitle] = useState('');
   let [boardContent, setBoardContent] = useState('');
 
+  /* 좋아요 업 */
   function upLike(index) {
     let copy = [...like];
     copy[index]++;
     setLike(copy);
   }
 
+  /* 글 삭제 */
   function removeBoard(index) {
     if (currentIndex == index) setModal(false);
     let copyTitle = [...title];
@@ -34,6 +37,7 @@ function App() {
     setDetail(copyDetail);
   }
 
+  /* 상세보기 띄우기 */
   function modalView(index) {
     if (modal) {
       index == currentIndex ? setModal(false) : setCurrentIndex(index)
@@ -51,7 +55,9 @@ function App() {
     setBoardContent(e);
   }
 
+  /* 글 작성 */
   function WriteBoard() {
+    /* 제목과 내용이 공백이 아니라면 작성 */
     if (boardTitle == '' || boardContent == '') {
       alert('입력하세요!');
     } else {
@@ -72,8 +78,8 @@ function App() {
       setDate(copyDate);
       setLike(copyLike);
       setDetail(copyDetail);
-      setBoardTitle('');
-      setBoardContent('');
+      setBoardTitle(''); // 입력 창 초기화
+      setBoardContent(''); // 입력 창 초기화
     }
   }
 
