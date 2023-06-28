@@ -2,6 +2,47 @@
   text-align: center;
 }
 
+.black-nav {
+  background: black;
+  width: 100%;
+  display: flex;
+  color: white;
+  padding: 20px;
+}
+
+.newBoard {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newBoard input {
+  margin-bottom: 5px;
+}
+
+.newBoard textarea {
+  margin-bottom: 5px;
+}
+
+.modal {
+  margin-top: 20px;
+  padding: 20px;
+  background: #eee;
+  text-align: left;
+}
+
+div {
+  box-sizing: border-box
+}
+
+.list {
+  text-align: left;
+  padding-left: 20px;
+  border-bottom: 1px solid grey;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,6 +73,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
